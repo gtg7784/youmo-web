@@ -32,9 +32,6 @@ class Header extends React.Component{
             <Link to='photo'>사진</Link>
           </li>
           <li>
-            <Link to='/mypage'>마이페이지</Link>
-          </li>
-          <li>
             {
               sessionStorage.length === 0
               ? <Link to='/login'>로그인</Link>

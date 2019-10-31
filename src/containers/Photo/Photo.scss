@@ -1,0 +1,65 @@
+@import '../../styles/colors';
+
+.Photo{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  width: calc(100vw - 288px);
+  min-height: calc(100vh - 64px);
+  overflow-y: scroll;
+  padding: 0px 144px;
+  background-color: $mainfifth;
+
+  & > div, a{
+    margin-top: 24px;
+    width: calc((100vw - 64px - 288px)/5);
+    height: 300px;
+    background-color: #fff;
+    margin-right: 16px;
+    border-radius: 12px;
+
+    &:nth-child(5n){
+      margin-right: 0px;
+    }
+
+    & > div{
+      &:nth-child(1){
+        height: 80%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+  
+        & > h1{
+          font-size: 64px;
+        }
+      }
+  
+      &:nth-child(2){
+        height: calc(20% - 1px);
+        width: calc(100% - 16);
+        border-top: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0px 8px;
+  
+        & > h3{
+          margin-top: 6px;
+          margin-bottom: 8px;
+        }
+  
+        & > p{
+          margin: 0 !important;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

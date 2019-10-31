@@ -12,6 +12,7 @@ import Video from './Video/Video';
 import How from './How/How';
 import Login from './Login/Login';
 import Register from './Register/Register';
+import AddVideo from './AddVideo/AddVideo';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,6 +47,7 @@ class App extends React.Component {
             <Switch>
               <Route path='/photo' exact component={Photo}/>
               <Route path='/video' exact component={Video}/>
+              <Route path='/video/add' exact component={AddVideo}/>
               <Route path='/' exact component={Main}/>
               <Route path='/register' exact component={Register}/>
               <Route path='/how-to-use' exact component={How}/>

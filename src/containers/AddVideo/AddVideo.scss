@@ -1,0 +1,43 @@
+@import '../../styles/colors';
+
+.AddVideo{
+  margin-top: 64px;
+  padding-top: 182px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 144px;
+    width: calc(100vw - 288px);
+    height: 40vh;
+    border: 4px dotted #000;
+
+    & > div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      & > input{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  & > button{
+    margin-top: 128px;
+    padding: 12px 36px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: $mainsecond;
+    color: #fff;
+    font-weight: 500;
+  }
+}

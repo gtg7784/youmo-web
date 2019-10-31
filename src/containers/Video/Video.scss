@@ -1,0 +1,26 @@
+@import '../../styles/colors';
+
+.Video{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  width: calc(100vw - 288px);
+  min-height: calc(100vh - 64px);
+  overflow-y: scroll;
+  padding: 0px 144px;
+  background-color: $mainfifth;
+
+  & > div{
+    margin-top: 24px;
+    width: calc((100vw - 64px - 288px)/5);
+    height: 300px;
+    background-color: #fff;
+    margin-right: 16px;
+
+    &:nth-child(5n){
+      margin-right: 0px;
+    }
+  }
+}
