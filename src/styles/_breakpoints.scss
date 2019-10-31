@@ -1,0 +1,11 @@
+$small: 426px;
+$medium: 768px;
+$large: 1024px;
+$extra: 1338px;
+
+$breakpoints: (
+ small: $small,
+ medium: $medium,
+ large: $large,
+ extra: $extra,
+);

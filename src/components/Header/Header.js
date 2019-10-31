@@ -7,7 +7,9 @@ class Header extends React.Component{
   render(){
     return(
       <header>
-        <h2>YOUMO</h2>
+        <h2>
+          <Link to='/'>YOUMO</Link>
+        </h2>
         <ul>
           <li>
             <Link to='/'>메인</Link>

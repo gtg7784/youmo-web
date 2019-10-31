@@ -1,0 +1,68 @@
+@import '../../styles/colors';
+
+.Main{
+  margin-top: 64px;
+  background-color: $mainfifth;
+  width: 100vw;
+  min-height: calc(100vh - 96px);
+
+  & > div{
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 144px;
+    justify-content: space-between;
+
+    & > div{
+      & > p{
+        margin-top: 102px;
+        font-size: 92px;
+        font-weight: 900;
+        text-align: left;
+        margin-bottom: 0px;
+
+        &:nth-child(2){
+          margin-top: -12px !important;
+          padding: 0px !important;
+        }
+      }
+
+      & > div{
+        display: flex;
+        flex-direction: row;
+        margin-top: 72px;
+
+        & > a{
+          text-decoration: none;
+          color: #000;
+          font-weight: 500;
+          margin-right: 32px;
+          background-color: transparent;
+          border: none;
+          font-size: 24px;
+          padding: 14px 24px;
+          
+          &:hover{
+            background-color: #000 !important;
+            color: #fff !important;
+          }
+        }
+      }
+    }
+
+    & > img{
+      width: 640px;
+    }
+  }
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background-color: $mainfifth;
+  height: 32px;
+  font-size: 12px;
+}
