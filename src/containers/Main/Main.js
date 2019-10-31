@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import * as classNames from 'classnames/bind' 
 
 import styles from './Main.scss'
@@ -9,6 +9,14 @@ import share from '../../assets/images/share.svg'
 const cx = classNames.bind(styles)
 
 class Main extends React.Component{
+  constructor(props){
+    super(props);
+
+    this.state = {
+      path: '/'
+    }
+  }
+
   render(){
     return(
       <React.Fragment>
@@ -34,4 +42,4 @@ class Main extends React.Component{
   }
 }
 
-export default Main;
+export default withRouter(Main);
