@@ -1,0 +1,12 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+@font-face{
+  font-family: 'InterparkGothicOTFB';
+  src:url('./assets/fonts/interparkFont/InterparkGothicOTFB.otf')
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'NanumSquare', sans-serif;
+}

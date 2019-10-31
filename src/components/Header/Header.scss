@@ -1,0 +1,28 @@
+header{
+  position: fixed;
+  z-index: 1000;
+  width: calc(100vw - 400px);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 200px;
+  box-shadow: 0px 4px 16px 16px #e0e0e030;
+
+  & > h2{
+    font-family: 'InterparkGothicOTFB';
+  }
+
+& > ul{
+  padding: 0;
+  list-style-type: none;
+    & > li{
+      float: left;
+      margin-left: 12px;
+      & > a{
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+}
