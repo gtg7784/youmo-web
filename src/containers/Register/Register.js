@@ -77,24 +77,22 @@ class Register extends React.Component{
     return(
       <div className={cx('Register')}>
         <div>
-          <div>
-            <label htmlFor="id">ID</label>
-            <input type="text" placeholder='ID' onChange={(e) => this.onChangeId(e)}/>
-          </div>
-          <div>
-            <label htmlFor="id">Password</label>
-            <input type="password" placeholder='Password' onChange={(e) => this.onChangePw(e)}/>
-          </div>
-          <div>
-            <label htmlFor="id">Password Check</label>
-            <input type="password" placeholder='Password Check' onChange={(e) => this.onChangePwCheck(e)}/>
-          </div>
-          <div>
-            <label htmlFor="id">E-Mail</label>
-            <input type="email" placeholder='Email' onChange={(e) => this.onChangeEmail(e)}/>
-          </div>
-          <button onClick={() => this.onRegister()}>Register</button>
+          <label htmlFor="id">ID</label>
+          <input type="text" placeholder='ID' onChange={(e) => this.onChangeId(e)}/>
         </div>
+        <div>
+          <label htmlFor="id">Password</label>
+          <input type="password" placeholder='Password' onChange={(e) => this.onChangePw(e)}/>
+        </div>
+        <div>
+          <label htmlFor="id">Password Check</label>
+          <input type="password" placeholder='Password Check' onChange={(e) => this.onChangePwCheck(e)}/>
+        </div>
+        <div>
+          <label htmlFor="id">E-Mail</label>
+          <input type="email" placeholder='Email' onChange={(e) => this.onChangeEmail(e)}/>
+        </div>
+        <button onClick={() => this.onRegister()}>Register</button>
       </div>
     )
   }

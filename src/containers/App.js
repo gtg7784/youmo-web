@@ -9,7 +9,6 @@ import Header from '../components/Header/Header'
 import Main from './Main/Main';
 import Photo from './Photo/Photo';
 import Video from './Video/Video';
-import Mypage from './Mypage/Mypage';
 import How from './How/How';
 import Login from './Login/Login';
 import Register from './Register/Register';
@@ -27,8 +26,7 @@ class App extends React.Component {
           <div className="App">
             {
               window.location.pathname === '/photo' ||
-              window.location.pathname === '/video' ||
-              window.location.pathname === '/mypage' 
+              window.location.pathname === '/video' 
                 ? alert('로그인 후 서비스를 이용해주세요') & window.location.replace('/')
                 : null
               }
@@ -48,7 +46,6 @@ class App extends React.Component {
             <Switch>
               <Route path='/photo' exact component={Photo}/>
               <Route path='/video' exact component={Video}/>
-              <Route path='/mypage' exact component={Mypage}/>
               <Route path='/' exact component={Main}/>
               <Route path='/register' exact component={Register}/>
               <Route path='/how-to-use' exact component={How}/>

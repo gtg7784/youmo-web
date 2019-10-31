@@ -1,3 +1,51 @@
+@import '../../styles/colors';
+
 .Register{
   margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $mainfifth;
+  margin-top: 64px;
+  width: 100vw;
+  height: calc(100vh - 64px);
+
+  & > div{
+    border-radius: 15px;
+    width: calc(100vw - 352px - 16%);
+    margin: 15px 144px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 16px 15% 16px 32px;
+
+    & > label{
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    & > input{
+      width: 75%;
+      border-radius: 20px;
+      border: .5px solid #000;
+      margin-top: 16px;
+      margin-bottom: 12px;
+      padding: 10px 16px;
+      font-size: 17px;
+    }
+  }
+
+  & > button{
+    margin-top: 8%;
+    padding: 12px 36px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: $mainsecond;
+    color: #fff;
+    font-weight: 500;
+  }
 }
