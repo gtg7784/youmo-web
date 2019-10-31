@@ -66,7 +66,7 @@ class Register extends React.Component{
     })
     .then(res => {
       console.log(res)
-      if(res.status === 201){
+      if(res && res.status === 201){
         alert('회원가입이 완료되었습니다.')
         window.location.replace('/login')
       }

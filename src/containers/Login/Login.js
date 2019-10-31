@@ -45,7 +45,7 @@ class Login extends React.Component{
     })
     .then(res => {
       console.log(res)
-      if(res.status === 200){
+      if(res && res.status === 200){
         sessionStorage.setItem(
           "userInfo",
           JSON.stringify({
@@ -53,7 +53,7 @@ class Login extends React.Component{
             password: this.state.pw,
             token: res.data.token
           })
-        );
+        )
         window.location.replace('/')
       }
     })

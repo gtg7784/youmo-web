@@ -15,6 +15,16 @@ class Main extends React.Component{
     this.state = {
       path: '/'
     }
+
+    this.onUse = this.onUse.bind(this)
+  }
+
+  onUse = () => {
+    if(sessionStorage.length === 0){
+      return('/login')
+    } else {
+      return('/video')
+    }
   }
 
   render(){
@@ -26,7 +36,7 @@ class Main extends React.Component{
               <p>Censorship</p>
               <p>with A.I</p>
               <div>
-                <Link to='/login'>USE NOW !</Link>
+                <Link to={this.onUse}>USE NOW !</Link>
                 <Link to='/how-to-use'>HOW TO USE ?</Link>
               </div>
             </div>

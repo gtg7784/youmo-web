@@ -4,6 +4,17 @@ import { Link } from 'react-router-dom'
 import './Header.scss'
 
 class Header extends React.Component{
+  constructor(props){
+    super(props)
+
+    this.onLogout = this.onLogout.bind(this)
+  }
+
+  onLogout = () => {
+    sessionStorage.clear()
+    alert('로그아웃 되었습니다.')
+    window.location.replace('/')
+  }
   render(){
     return(
       <header>
@@ -24,7 +35,11 @@ class Header extends React.Component{
             <Link to='/mypage'>마이페이지</Link>
           </li>
           <li>
-            <Link to='/login'>로그인</Link>
+            {
+              sessionStorage.length === 0
+              ? <Link to='/login'>로그인</Link>
+              : <Link to='/' onClick={() => this.onLogout()}>로그아웃</Link>
+            }
           </li>
         </ul>
       </header>
