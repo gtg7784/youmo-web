@@ -38,13 +38,25 @@ class Photo extends React.Component{
   }
 
   onClick = (index, id) => {
-    axios.get(`/image/${index}`)
-      .then(res => {
-        console.log(res.data)
-        const type = `${res.headers['content-type']}`.split('/')
-        FileDownload(res.data, `${id}-${index}.${type[1]}`)
-      })
-  }
+    index += 1;
+    axios({
+      url:
+        "http://ec2-3-132-214-132.us-east-2.compute.amazonaws.com/api/image/" +
+        index,
+      method: "GET",
+      responseType: "blob" // important
+    })
+    .then(response => {
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement("a");
+      link.href = url;
+      const image = this.state.data[index + 1].image;
+      const type = image.split(".")[image.split.length - 1];
+      link.setAttribute("download", `${id}-${index + 1}.${type}`);
+      document.body.appendChild(link);
+      link.click();
+    });
+  };
 
   render(){
     return(
