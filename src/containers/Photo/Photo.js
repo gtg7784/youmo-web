@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import FileDownload from 'js-file-download'
 import * as classNames from 'classnames/bind'
 
 import styles from './Photo.scss'
@@ -34,11 +33,10 @@ class Photo extends React.Component{
   }
 
   onPlus = () => {
-    window.location.replace = '/photo/add'
+    window.location.href = '/photo/add'
   }
 
   onClick = (index, id) => {
-    index += 1;
     axios({
       url:
         "http://ec2-3-132-214-132.us-east-2.compute.amazonaws.com/api/image/" +
@@ -50,9 +48,10 @@ class Photo extends React.Component{
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement("a");
       link.href = url;
-      const image = this.state.data[index + 1].image;
-      const type = image.split(".")[image.split.length - 1];
-      link.setAttribute("download", `${id}-${index + 1}.${type}`);
+      const image = this.state.data[index-1].image;
+      const type = image.split(".")[image.split('.').length - 1];
+      console.log(image)
+      link.setAttribute("download", `${id}-${index}.${type}`);
       document.body.appendChild(link);
       link.click();
     });
@@ -71,8 +70,8 @@ class Photo extends React.Component{
         </div>
         {
           this.state.data.map((item, index) => (
-            <div key={index} onClick={() => this.onClick(index, item.writer)} >
-                <div style={{'background': `url(http://ec2-3-132-214-132.us-east-2.compute.amazonaws.com/api/image/${index})`}}/>
+            <div key={index} onClick={() => this.onClick(index+1, item.writer)} >
+                <div style={{'background': `url(http://ec2-3-132-214-132.us-east-2.compute.amazonaws.com/api/image/${item.id})`}}/>
                 <div>
                   <h3>{`${item.writer}-${item.id}`}</h3>
                 </div>

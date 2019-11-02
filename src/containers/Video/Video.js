@@ -50,7 +50,7 @@ class Video extends React.Component{
           this.state.data.map((item, index) => (
             <div>
                 <div>
-                  <img src="item.image" alt=""/>
+                  <video src={`http://ec2-3-132-214-132.us-east-2.compute.amazonaws.com/api/image/${item.id}`}></video>
                 </div>
                 <div>
 

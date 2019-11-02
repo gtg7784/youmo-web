@@ -1,6 +1,5 @@
 import React from 'react'
 import Dropzone from 'react-dropzone'
-import axios from 'axios'
 import * as classNames from 'classnames/bind'
 
 import styles from './AddVideo.scss'
